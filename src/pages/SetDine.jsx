@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     fontFamily: "'Inter', sans-serif",
     fontWeight: 500,
-    margin: "0 0 20px 0",
+    margin: "25px 0 20px 0",
     color: "#272D2F",
   },
   cardTitleStyle: {
@@ -148,10 +148,12 @@ const useStyles = makeStyles((theme) => ({
   customOutline: {
     "& .MuiOutlinedInput-notchedOutline": {
       borderColor: "#EEEEEE",
-      borderRadius: "25px",
+      borderRadius: "100px",
     },
   },
   selectStyle: {
+    fontSize:'17px !important',
+    color: "#666E7A !important",
     ["& .MuiSelect-icon"]: {
       right: "15px",
     },
@@ -215,7 +217,7 @@ const SetDine = () => {
       <Container
         maxWidth="xs"
         style={{
-          padding: "15px 20px",
+          padding: "15px 20px 5px 20px",
         }}
       >
         <p className={classes.titleStyle}>You are Dining at</p>
@@ -304,7 +306,7 @@ const SetDine = () => {
           classes={{ root: classes.customOutline }}
           style={{ marginBottom: "15px" }}
         >
-          <InputLabel id="place">&nbsp;Hall or Floor</InputLabel>
+          <InputLabel id="place">&nbsp;&nbsp;Hall or Floor</InputLabel>
           <Select
             className={classes.selectStyle}
             labelId="place-autowidth-label"
@@ -324,7 +326,7 @@ const SetDine = () => {
           classes={{ root: classes.customOutline }}
           style={{ marginBottom: "15px" }}
         >
-          <InputLabel id="tableNo">&nbsp;Table No</InputLabel>
+          <InputLabel id="tableNo">&nbsp;&nbsp;Table No</InputLabel>
           <Select
             className={classes.selectStyle}
             labelId="tableNo-autowidth-label"
@@ -340,7 +342,7 @@ const SetDine = () => {
           </Select>
         </FormControl>
         <FormControl fullWidth classes={{ root: classes.customOutline }}>
-          <InputLabel id="noOfGuest">&nbsp;No Of Guest</InputLabel>
+          <InputLabel id="noOfGuest">&nbsp;&nbsp;No of Guest</InputLabel>
           <Select
             className={classes.selectStyle}
             labelId="noOfGuest-autowidth-label"

@@ -123,8 +123,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   selectStyle: {
+    fontSize: "14px !important",
+    textAlign:'center !important',
     ["& .MuiSelect-icon"]: {
-      right: "15px",
+      right: "7px",
     },
     ["& .MuiOutlinedInput-input"]: {
       padding: "4.5px 14px",
@@ -202,7 +204,7 @@ const Home = () => {
           padding: "15px 20px 15px 20px",
         }}
       >
-        <Box sx={{ maxWidth: 110, margin: "auto" }}>
+        <Box sx={{ maxWidth: 115, margin: "auto" }}>
            
           <FormControl fullWidth size="small" classes={{ root: classes.customOutline }}>
       
@@ -213,11 +215,11 @@ const Home = () => {
               // label="English"
               onChange={handleChange}
               className={classes.selectStyle}
-              style={{ fontSize: "14px",textAlign:'center' }}
+              // style={{ fontSize: "14px",textAlign:'center' }}
               IconComponent={KeyboardArrowDownIcon}
              
               // startAdornment={<AccountCircle/>}
-              // startAdornment={<img src={GlobalIcon} alt=''/>}
+              startAdornment={<img src={GlobalIcon} alt='' style={{position:'absolute',left:'8px'}}/>}
 
             >
               <MenuItem value={"English"}>English</MenuItem>
