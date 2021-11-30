@@ -10,6 +10,7 @@ import dishIcon from "../assets/images/dishIcon.png";
 import reserveIcon from "../assets/images/reserveIcon.png";
 import wallet from "../assets/images/wallet.png";
 import forwardIcon from "../assets/images/forwardIcon.png";
+import GlobalIcon from "../assets/images/GlobalIcon.svg";
 
 import { makeStyles } from "@mui/styles";
 import FormControl from "@mui/material/FormControl";
@@ -126,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
       right: "15px",
     },
     ["& .MuiOutlinedInput-input"]: {
-      padding: "8.5px 14px",
+      padding: "4.5px 14px",
     },
   },
   dotStyle: {
@@ -201,7 +202,7 @@ const Home = () => {
           padding: "15px 20px 15px 20px",
         }}
       >
-        <Box sx={{ maxWidth: 120, margin: "auto" }}>
+        <Box sx={{ maxWidth: 110, margin: "auto" }}>
            
           <FormControl fullWidth size="small" classes={{ root: classes.customOutline }}>
       
@@ -216,6 +217,7 @@ const Home = () => {
               IconComponent={KeyboardArrowDownIcon}
              
               // startAdornment={<AccountCircle/>}
+              // startAdornment={<img src={GlobalIcon} alt=''/>}
 
             >
               <MenuItem value={"English"}>English</MenuItem>
