@@ -250,7 +250,7 @@ const Menu = () => {
       // const sectionHeight = section.clientHeight;
       // console.log("sectionHeight", sectionHeight);
     });
-    console.log("sectionsDetail", sectionsDetail);
+    // console.log("sectionsDetail", sectionsDetail);
 
     document.addEventListener("scroll", () => {
       const scrollCheck = window.scrollY;
@@ -274,7 +274,7 @@ const Menu = () => {
       }
       if (typeof sectionIndex === "undefined") {
         setActiveIndex(0);
-        console.log('sectionIndex undefined');
+        // console.log('sectionIndex undefined');
       } else {
         setActiveIndex(sectionIndex);
       }

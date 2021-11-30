@@ -233,11 +233,11 @@ const MenuCarousel = ({ fnActive, active, activeIndex }) => {
     prevArrow: <SamplePrevArrow />,
   };
   useEffect(() => {
-    console.log("activeIndex1111", activeIndex);
+    // console.log("activeIndex1111", activeIndex);
     slider1.current.slickGoTo(activeIndex);
     setTimeout(() => {
       slider1.current.slickGoTo(activeIndex);
-      console.log("300");
+      // console.log("300");
     }, 500);
   }, [activeIndex]);
   return (
@@ -245,7 +245,7 @@ const MenuCarousel = ({ fnActive, active, activeIndex }) => {
     <div>
       <Slider ref={(slider) => (slider1.current = slider)} {...settings}>
         <div>
-          <div style={{ padding: "0 15px" }}>
+          <div style={{ padding: "0 5px" }}>
             <div
               item
               className={`${classes.itemStyle} ${
@@ -258,7 +258,7 @@ const MenuCarousel = ({ fnActive, active, activeIndex }) => {
           </div>
         </div>
         <div>
-          <div style={{ padding: "0 15px" }}>
+          <div style={{ padding: "0 5px" }}>
             <div
               item
               className={`${classes.itemStyle} ${
@@ -271,7 +271,7 @@ const MenuCarousel = ({ fnActive, active, activeIndex }) => {
           </div>
         </div>
         <div>
-          <div style={{ padding: "0 15px" }}>
+          <div style={{ padding: "0 5px" }}>
             <div
               item
               className={`${classes.itemStyle} ${
