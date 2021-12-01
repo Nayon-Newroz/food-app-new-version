@@ -222,6 +222,7 @@ const Menu = () => {
   const classes = useStyles();
   const [active, setActive] = useState("Deals");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [reload, setReload] = useState(false);
   const fnActive = (id) => {
     // setActive(id);
     var elmntToView1 = document.getElementById("menu");
@@ -274,9 +275,12 @@ const Menu = () => {
       }
       if (typeof sectionIndex === "undefined") {
         setActiveIndex(0);
-        // console.log('sectionIndex undefined');
+        // console.log("sectionIndex undefined", reload);
+        setReload(!reload);
       } else {
         setActiveIndex(sectionIndex);
+        // console.log("sectionIndex ", sectionIndex, reload);
+        setReload(!reload);
       }
     });
   }, []);
@@ -312,7 +316,7 @@ const Menu = () => {
       </Container>
 
       <Container maxWidth="xs" className={classes.container2SidePadding}>
-        <Box sx={{ margin: "15px 0px" }}>
+        <Box sx={{ margin: "0px 0px 15px 0px" }}>
           <Grid container justifyContent="space-between" alignItems="center">
             <Grid item xs={6}>
               <h4 className={classes.h4}>Recommended</h4>
@@ -383,6 +387,7 @@ const Menu = () => {
               fnActive={fnActive}
               active={active}
               activeIndex={activeIndex}
+              reload={reload}
             />
           </Grid>
           {/* <Grid

@@ -301,7 +301,7 @@ const Home = () => {
       <Container
         maxWidth="xs"
         style={{
-          padding: "15px 40px ",
+          padding: "15px 40px 40px 40px",
         }}
       >
         <List>

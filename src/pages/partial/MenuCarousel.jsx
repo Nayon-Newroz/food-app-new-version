@@ -191,11 +191,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MenuCarousel = ({ fnActive, active, activeIndex }) => {
+const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
   const classes = useStyles();
+  const [lateFire, setLateFire] = useState(false)
 
   const slider1 = useRef();
 
+  const [state, setState] = useState({
+    activeSlide: 0,
+    activeSlide2: 0,
+  });
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -219,6 +224,10 @@ const MenuCarousel = ({ fnActive, active, activeIndex }) => {
       />
     );
   }
+  const slidesToShowSlider = 3;
+  const arreyLength = 4;
+  const lowestIndex = 0;
+  const highestIndex = arreyLength - slidesToShowSlider;
 
   const settings = {
     // className: "center",
@@ -226,23 +235,31 @@ const MenuCarousel = ({ fnActive, active, activeIndex }) => {
     // dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: slidesToShowSlider,
     slidesToScroll: 1,
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    beforeChange: (current, next) => setState({ activeSlide: next }),
+    afterChange: (current) => setState({ activeSlide2: current }),
   };
   useEffect(() => {
-    // console.log("activeIndex1111", activeIndex);
     slider1.current.slickGoTo(activeIndex);
-    setTimeout(() => {
-      slider1.current.slickGoTo(activeIndex);
-      // console.log("300");
-    }, 500);
+    // console.log("activeIndex1111", activeIndex);
+    // setTimeout(() => {
+    //   setLateFire(!lateFire)
+    // }, 2000);
   }, [activeIndex]);
   return (
     // <div className={classes.carouselWidth}>
-    <div>
+    <div >
+      {/* <h2>beforeChange and afterChange hooks</h2>
+      <p>
+        BeforeChange ==== activeSlide: <strong>{state.activeSlide}</strong>
+      </p>
+      <p>
+        AfterChange ==== activeSlide: <strong>{state.activeSlide2}</strong>
+      </p> */}
       <Slider ref={(slider) => (slider1.current = slider)} {...settings}>
         <div>
           <div style={{ padding: "0 5px" }}>
