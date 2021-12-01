@@ -288,6 +288,9 @@ const Menu = () => {
   //   setActive("Deals");
   //   window.scrollTo(0, 0);
   // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     // <div style={{ background: "#FAF9FB" }}>
     <div>
@@ -345,7 +348,11 @@ const Menu = () => {
 
       <Container
         maxWidth="xs"
-        className={classes.container2SidePaddingAndMargin}
+        style={{
+          paddingLeft: "20px",
+          paddingRight: "20px",
+          margin: "25px auto 15px",
+        }}
       >
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item xs={6}>
@@ -433,7 +440,7 @@ const Menu = () => {
         className={classes.container2SidePaddingAndMargin}
       >
         <section id="Deals">
-          <Box sx={{ margin: "15px 0px" }}>
+          <Box sx={{ margin: "35px 0px 15px 0px" }}>
             <label className={`${classes.h4}`} style={{ fontWeight: 600 }}>
               Deals
             </label>

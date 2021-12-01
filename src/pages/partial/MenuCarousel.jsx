@@ -250,6 +250,7 @@ const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
     //   setLateFire(!lateFire)
     // }, 2000);
   }, [activeIndex]);
+ 
   return (
     // <div className={classes.carouselWidth}>
     <div >
