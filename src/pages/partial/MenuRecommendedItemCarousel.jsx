@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) =>({
     marginRight: "10px",
   },
   buttonStyle: {
-    background: "black !important",
+    // background: "black !important",
     padding: "0px !important",
     borderRadius: "5px !important",
   },
@@ -198,7 +198,7 @@ const data=[
                           className={classes.buttonStyle}
                           component="span"
                         >
-                          <AddIcon fontSize="small" style={{ color: "#fff" }} />
+                          <AddIcon fontSize="small" style={{ color: "#272D2F" }} />
                         </IconButton>
                       </Grid>
                     </Grid>
