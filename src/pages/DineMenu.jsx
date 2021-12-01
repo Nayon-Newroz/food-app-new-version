@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import FilterIcon from "../assets/images/FilterIcon.svg";
 import burgerBanner from "../assets/images/burgerBanner.svg";
@@ -53,6 +52,12 @@ const useStyles = makeStyles((theme) => ({
   },
   p: {
     fontSize: "12px",
+    fontFamily: "'Inter', sans-serif",
+    color: "#666E7A",
+    margin: 0,
+  },
+  itemText: {
+    fontSize: "15px",
     fontFamily: "'Inter', sans-serif",
     color: "#666E7A",
     margin: 0,
@@ -247,8 +252,7 @@ const DineMenu = () => {
   //   window.scrollTo(0, 0);
   // }, []);
   return (
-    <div style={{ background: "#FAF9FB" }}>
-      <CssBaseline />
+    <div>
       <Container
         maxWidth="xs"
         style={{
@@ -297,7 +301,6 @@ const DineMenu = () => {
         maxWidth="xs"
         style={{
           padding: "15px 0px 15px 20px",
-          // borderBottom: "2px solid #EEEEEE",
         }}
       >
         <Grid container alignItems="center">
@@ -336,19 +339,19 @@ const DineMenu = () => {
         >
           <Grid item className={`${classes.itemStyle} ${classes.active}`}>
             <img src={exploreActive} alt="" className={classes.centerIcon} />
-            <p className={`${classes.p}`}>Explore</p>
+            <p className={`${classes.itemText}`}>Explore</p>
           </Grid>
           <Grid item className={classes.itemStyle}>
             <img src={Recommendations} alt="" className={classes.centerIcon} />
-            <p className={classes.p}>Recommendations</p>
+            <p className={classes.itemText}>Recommendations</p>
           </Grid>
           <Grid item className={classes.itemStyle}>
             <img src={offers} alt="" className={classes.centerIcon} />
-            <p className={classes.p}>Offers</p>
+            <p className={classes.itemText}>Offers</p>
           </Grid>
           <Grid item className={classes.itemStyle}>
             <img src={menu} alt="" className={classes.centerIcon} />
-            <p className={classes.p}>Menu</p>
+            <p className={classes.itemText}>Menu</p>
           </Grid>
         </Grid>
       </Container>
@@ -461,7 +464,7 @@ const DineMenu = () => {
           margin: "15px auto",
           position: "sticky ",
           top: 0,
-          background: "#FAF9FB",
+          background: "#fff",
           zIndex: 20,
         }}
         id="menu"
@@ -673,6 +676,7 @@ const DineMenu = () => {
           ))}
         </section>
       </Container>
+
       <Container
         maxWidth="xs"
         style={{
@@ -754,10 +758,11 @@ const DineMenu = () => {
           ))}
         </section>
       </Container>
+
       <Container
         maxWidth="xs"
         className={classes.container2SidePaddingAndMargin}
-      >
+       >
         <section id="For Sharing">
           <Box sx={{ margin: "15px 0px" }}>
             <label className={`${classes.h4}`} style={{ fontWeight: 600 }}>

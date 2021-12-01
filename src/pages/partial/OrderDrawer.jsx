@@ -10,6 +10,21 @@ import Grid from "@mui/material/Grid";
 import backArrow from "../../assets/images/backArrow.svg";
 import clear from "../../assets/images/clear.svg";
 import clock from "../../assets/images/clock.svg";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+const styles = (theme) => ({
+  root: {
+    padding: theme.spacing(1),
+    // [theme.breakpoints.down('md')]: {
+    //   backgroundColor: theme.palette.secondary.main,
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: theme.palette.primary.main,
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //   backgroundColor: green[500],
+    // },
+  },
+});
 
 const useStyles = makeStyles((theme) => ({
   drawerTitle: {
@@ -63,6 +78,10 @@ export default function SwipeableTemporaryDrawer({ drawerOpen }) {
       sx={{
         width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
         // maxHeight: "85vh",
+        // [theme.breakpoints.down(376)]: {
+        //   fontSize: "10px",
+        // },
+        margin: "auto",
       }}
       role="presentation"
       // onClick={toggleDrawer(anchor, false)}
@@ -97,7 +116,7 @@ export default function SwipeableTemporaryDrawer({ drawerOpen }) {
               onClick={toggleDrawer(anchor, false)}
               className={classes.iconButtonStyle}
             >
-            <img src={clear} alt="" />
+              <img src={clear} alt="" />
             </IconButton>
           </Grid>
         </Grid>
@@ -130,9 +149,9 @@ export default function SwipeableTemporaryDrawer({ drawerOpen }) {
     setActiveUseEffect(true);
   }, [drawerOpen]);
   return (
-    <div>
+    <div style={{ maxWidth: "600px" }}>
       {["bottom"].map((anchor) => (
-        <React.Fragment key={anchor}>
+        <div key={anchor}>
           {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
           <button hidden id="drawerBtn" onClick={toggleDrawer(anchor, true)}>
             {anchor}
@@ -149,7 +168,7 @@ export default function SwipeableTemporaryDrawer({ drawerOpen }) {
           >
             {list(anchor)}
           </SwipeableDrawer>
-        </React.Fragment>
+        </div>
       ))}
     </div>
   );

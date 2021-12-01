@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
   },
   selectStyle: {
     fontSize: "14px !important",
-    textAlign:'center !important',
+    textAlign: "center !important",
     ["& .MuiSelect-icon"]: {
       right: "7px",
     },
@@ -205,9 +205,11 @@ const Home = () => {
         }}
       >
         <Box sx={{ maxWidth: 115, margin: "auto" }}>
-           
-          <FormControl fullWidth size="small" classes={{ root: classes.customOutline }}>
-      
+          <FormControl
+            fullWidth
+            size="small"
+            classes={{ root: classes.customOutline }}
+          >
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
@@ -217,10 +219,14 @@ const Home = () => {
               className={classes.selectStyle}
               // style={{ fontSize: "14px",textAlign:'center' }}
               IconComponent={KeyboardArrowDownIcon}
-             
               // startAdornment={<AccountCircle/>}
-              startAdornment={<img src={GlobalIcon} alt='' style={{position:'absolute',left:'8px'}}/>}
-
+              startAdornment={
+                <img
+                  src={GlobalIcon}
+                  alt=""
+                  style={{ position: "absolute", left: "8px" }}
+                />
+              }
             >
               <MenuItem value={"English"}>English</MenuItem>
               <MenuItem value={"Bangla"}>Bangla</MenuItem>
@@ -361,6 +367,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
+
       <OrderDrawer drawerOpen={drawerOpen} />
     </div>
   );

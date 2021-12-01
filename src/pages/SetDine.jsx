@@ -92,6 +92,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Inter', sans-serif",
     color: "#ffffff",
     margin: 0,
+    [theme.breakpoints.down(376)]: {
+      fontSize: "10px",
+    },
   },
 
   imageStyle: {

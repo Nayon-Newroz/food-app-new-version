@@ -224,10 +224,10 @@ const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
       />
     );
   }
-  const slidesToShowSlider = 3;
-  const arreyLength = 4;
-  const lowestIndex = 0;
-  const highestIndex = arreyLength - slidesToShowSlider;
+  // const slidesToShowSlider = 3;
+  // const arreyLength = 4;
+  // const lowestIndex = 0;
+  // const highestIndex = arreyLength - slidesToShowSlider;
 
   const settings = {
     // className: "center",
@@ -235,7 +235,7 @@ const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
     // dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: slidesToShowSlider,
+    slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,

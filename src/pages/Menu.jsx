@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import CssBaseline from "@mui/material/CssBaseline";
+import React, { useState, useEffect } from "react"; 
 import Container from "@mui/material/Container";
 import FilterIcon from "../assets/images/FilterIcon.svg";
 import burgerBanner from "../assets/images/burgerBanner.svg";
@@ -294,7 +293,7 @@ const Menu = () => {
   return (
     // <div style={{ background: "#FAF9FB" }}>
     <div>
-      <CssBaseline />
+   
       <Container
         maxWidth="xs"
         style={{
