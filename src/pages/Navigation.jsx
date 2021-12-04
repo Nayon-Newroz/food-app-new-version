@@ -4,12 +4,20 @@ import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SetDine from "./SetDine";
 import Menu from "./Menu";
+import OrderPage from "./OrderPage";
+import Order from "./order/Order";
 
 const Navigation = () => {
   return (
     <React.Fragment>
      
         <Switch>
+          {/* <Route path="/order">
+            <Order />
+          </Route> */}
+          <Route path="/home">
+            <OrderPage />
+          </Route>
           <Route path="/menu">
             <Menu />
           </Route>

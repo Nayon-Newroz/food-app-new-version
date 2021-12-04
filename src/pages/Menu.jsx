@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; 
+import React, { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
 import FilterIcon from "../assets/images/FilterIcon.svg";
 import burgerBanner from "../assets/images/burgerBanner.svg";
@@ -293,7 +293,6 @@ const Menu = () => {
   return (
     // <div style={{ background: "#FAF9FB" }}>
     <div>
-   
       <Container
         maxWidth="xs"
         style={{
@@ -362,6 +361,8 @@ const Menu = () => {
           </Grid>
         </Grid>
       </Container>
+     
+     
       <Container
         maxWidth="xs"
         style={{
@@ -395,45 +396,12 @@ const Menu = () => {
               activeIndex={activeIndex}
               reload={reload}
             />
+             
           </Grid>
-          {/* <Grid
-            item
-            className={`${classes.itemStyle} ${
-              active === "Deals" ? classes.active : null
-            }`}
-            onClick={() => fnActive("Deals")}
-          >
-            <p className={`${classes.menuItem}`}>Deals</p>
-          </Grid>
-          <Grid
-            item
-            className={`${classes.itemStyle} ${
-              active === "Popular" ? classes.active : null
-            }`}
-            onClick={() => fnActive("Popular")}
-          >
-            <p className={classes.menuItem}>Popular</p>
-          </Grid>
-          <Grid
-            item
-            className={`${classes.itemStyle} ${
-              active === "For One" ? classes.active : null
-            }`}
-            onClick={() => fnActive("For One")}
-          >
-            <p className={classes.menuItem}>For One</p>
-          </Grid>
-          <Grid
-            item
-            className={`${classes.itemStyle} ${
-              active === "For Sharing" ? classes.active : null
-            }`}
-            onClick={() => fnActive("For Sharing")}
-          >
-            <p className={classes.menuItem}>For Sharing</p>
-          </Grid> */}
         </Grid>
       </Container>
+    
+    
       <Container
         maxWidth="xs"
         className={classes.container2SidePaddingAndMargin}
@@ -514,6 +482,8 @@ const Menu = () => {
           ))}
         </section>
       </Container>
+    
+    
       <Container
         maxWidth="xs"
         className={classes.container2SidePaddingAndMargin}
@@ -594,6 +564,8 @@ const Menu = () => {
           ))}
         </section>
       </Container>
+    
+    
       <Container
         maxWidth="xs"
         style={{
@@ -678,6 +650,8 @@ const Menu = () => {
           ))}
         </section>
       </Container>
+   
+   
       <Container
         maxWidth="xs"
         className={classes.container2SidePaddingAndMargin}

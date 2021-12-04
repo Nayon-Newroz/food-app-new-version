@@ -155,7 +155,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   selectStyle: {
-    fontSize:'17px !important',
+    fontSize: "17px !important",
     color: "#666E7A !important",
     ["& .MuiSelect-icon"]: {
       right: "15px",
@@ -367,7 +367,14 @@ const SetDine = () => {
           padding: "15px 20px ",
         }}
       >
-        <Link to="/dine-menu" style={{ textDecoration: "none" }}>
+        <Link
+          to="/home"
+          // to={{
+          //   pathname: "/order",
+          //   search: "?sort=home",
+          // }}
+          style={{ textDecoration: "none" }}
+        >
           <div className={classes.buttonStyle}>Start Ordering</div>
         </Link>
       </Container>

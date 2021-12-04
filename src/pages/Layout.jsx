@@ -7,7 +7,12 @@ const Layout = () => {
   let location = useLocation();
 
   const footerNavbar = () => {
-    if (location.pathname === "/dine-menu" || location.pathname === "/menu") {
+    if (
+      location.pathname === "/dine-menu" ||
+      location.pathname === "/menu" ||
+      location.pathname === "/home"
+    ) {
+      // if (location.pathname === "/order") {
       return (
         <div
           style={{

@@ -11,6 +11,8 @@ import backArrow from "../../assets/images/backArrow.svg";
 import clear from "../../assets/images/clear.svg";
 import clock from "../../assets/images/clock.svg";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 const styles = (theme) => ({
   root: {
     padding: theme.spacing(1),
@@ -53,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SwipeableTemporaryDrawer({ drawerOpen }) {
   const classes = useStyles();
+  const matches = useMediaQuery("(min-width:600px)");
+  console.log("matches", matches);
+
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -77,11 +82,8 @@ export default function SwipeableTemporaryDrawer({ drawerOpen }) {
     <Box
       sx={{
         width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
-        // maxHeight: "85vh",
-        // [theme.breakpoints.down(376)]: {
-        //   fontSize: "10px",
-        // },
-        margin: "auto",
+
+        margin: matches === true ? "auto" : "none",
       }}
       role="presentation"
       // onClick={toggleDrawer(anchor, false)}
@@ -104,7 +106,6 @@ export default function SwipeableTemporaryDrawer({ drawerOpen }) {
               onClick={toggleDrawer(anchor, false)}
               className={classes.iconButtonStyle}
             >
-              {/* <ClearIcon style={{ color: "#E2E2E2" }} /> */}
               <img src={backArrow} alt="" />
             </IconButton>
           </Grid>

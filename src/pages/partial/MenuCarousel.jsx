@@ -191,9 +191,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
+const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
   const classes = useStyles();
-  const [lateFire, setLateFire] = useState(false)
+  const [lateFire, setLateFire] = useState(false);
 
   const slider1 = useRef();
 
@@ -250,10 +250,10 @@ const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
     //   setLateFire(!lateFire)
     // }, 2000);
   }, [activeIndex]);
- 
+
   return (
     // <div className={classes.carouselWidth}>
-    <div >
+    <div>
       {/* <h2>beforeChange and afterChange hooks</h2>
       <p>
         BeforeChange ==== activeSlide: <strong>{state.activeSlide}</strong>
@@ -265,7 +265,6 @@ const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
         <div>
           <div style={{ padding: "0 5px" }}>
             <div
-              item
               className={`${classes.itemStyle} ${
                 active === "Deals" ? classes.active : null
               }`}
@@ -278,7 +277,6 @@ const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
         <div>
           <div style={{ padding: "0 5px" }}>
             <div
-              item
               className={`${classes.itemStyle} ${
                 active === "Popular" ? classes.active : null
               }`}
@@ -291,7 +289,6 @@ const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
         <div>
           <div style={{ padding: "0 5px" }}>
             <div
-              item
               className={`${classes.itemStyle} ${
                 active === "For One" ? classes.active : null
               }`}
@@ -304,7 +301,6 @@ const MenuCarousel = ({ fnActive, active, activeIndex,reload }) => {
         <div>
           <div style={{ padding: "0 5px" }}>
             <div
-              item
               className={`${classes.itemStyle} ${
                 active === "For Sharing" ? classes.active : null
               }`}

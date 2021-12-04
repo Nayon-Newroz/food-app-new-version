@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { makeStyles } from "@mui/styles";
-import exploreIcon from "../../assets/images/exploreIcon.svg";
-import HomeIcon from "../../assets/images/HomeIcon.svg";
-import WalletIcon from "../../assets/images/WalletIcon.svg";
-import ClubPassIcon from "../../assets/images/ClubPassIcon.svg";
-import dineIconAsh from "../../assets/images/dineIconAsh.svg";
-import { Link } from "react-router-dom";
+import InactiveExploreIcon from "../../assets/images/InactiveExploreIcon.svg";
+import ActiveHomeIcon from "../../assets/images/ActiveHomeIcon.svg";
+import ActiveExploreIcon from "../../assets/images/ActiveExploreIcon.svg";
+import ActiveDineIcon from "../../assets/images/ActiveDineIcon.svg";
+import ActiveClubPassIcon from "../../assets/images/ActiveClubPassIcon.svg";
+import InactiveHomeIcon from "../../assets/images/InactiveHomeIcon.svg";
+import InactiveWalletIcon from "../../assets/images/InactiveWalletIcon.svg";
+import InactiveClubPassIcon from "../../assets/images/InactiveClubPassIcon.svg";
+import InactiveDineIcon from "../../assets/images/InactiveDineIcon.svg";
+import { Link, useLocation } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   p: {
@@ -49,6 +53,10 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
   const classes = useStyles();
+  let location = useLocation();
+  let pathName = location.pathname;
+  
+   
   return (
     <div>
       <Container
@@ -65,28 +73,58 @@ const Navbar = () => {
           alignItems="center"
           className={classes.menuStyle}
         >
-          <Grid item className={`${classes.itemStyle} ${classes.active}`}>
-           
-              <img src={HomeIcon} alt="" className={classes.centerIcon} />
+          <Grid
+            item
+            className={`${classes.itemStyle}  ${
+              pathName === "/home" ? classes.active : null
+            }`}
+          >
+            <Link to="/home" style={{ textDecoration: "none" }}>
+              <img
+                src={pathName === "/home" ? ActiveHomeIcon : InactiveHomeIcon}
+                alt=""
+                className={classes.centerIcon}
+              />
               <p className={`${classes.p}`}>Home</p>
-  
+            </Link>
           </Grid>
           <Grid item className={`${classes.itemStyle}`}>
-            <img src={exploreIcon} alt="" className={classes.centerIcon} />
+            <img
+              src={InactiveExploreIcon}
+              alt=""
+              className={classes.centerIcon}
+            />
             <p className={`${classes.p}`}>Explore</p>
           </Grid>
-          <Grid item className={classes.itemStyle}>
-          <Link to="/menu" style={{textDecoration:'none'}}>
-            <img src={dineIconAsh} alt="" className={classes.centerIcon} />
-            <p className={classes.p}>Menu</p>
+          <Grid
+            item
+            className={`${classes.itemStyle}  ${
+              pathName === "/menu" ? classes.active : null
+            }`}
+          >
+            <Link to="/menu" style={{ textDecoration: "none" }}>
+              <img
+                src={pathName === "/menu" ? ActiveDineIcon : InactiveDineIcon}
+                alt=""
+                className={classes.centerIcon}
+              />
+              <p className={classes.p}>Menu</p>
             </Link>
           </Grid>
           <Grid item className={classes.itemStyle}>
-            <img src={ClubPassIcon} alt="" className={classes.centerIcon} />
+            <img
+              src={InactiveClubPassIcon}
+              alt=""
+              className={classes.centerIcon}
+            />
             <p className={classes.p}>ClubPass</p>
           </Grid>
           <Grid item className={classes.itemStyle}>
-            <img src={WalletIcon} alt="" className={classes.centerIcon} />
+            <img
+              src={InactiveWalletIcon}
+              alt=""
+              className={classes.centerIcon}
+            />
             <p className={classes.p}>Wallet</p>
           </Grid>
         </Grid>
