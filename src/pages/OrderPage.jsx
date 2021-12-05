@@ -77,6 +77,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#666E7A",
     margin: 0,
   },
+  main:{
+    marginBottom: "10px", backgroundColor: "#fff",padding:'15px 0'
+  },
   itemText: {
     fontSize: "15px",
     fontFamily: "'Inter', sans-serif",
@@ -205,16 +208,15 @@ const useStyles = makeStyles((theme) => ({
   inputStyle: {
     boxShadow: "rgba(149, 157, 165, 0.2) 0px 1px 4px",
   },
-  container2SidePadding: {
-    paddingLeft: "20px !important",
-    paddingRight: "20px !important",
+  container2SidePadding: { 
+    padding: "25px 20px 0 20px !important",
   },
   container2SidePaddingAndMargin: {
-    paddingLeft: "20px !important",
-    paddingRight: "20px !important",
-    paddingTop: "15px !important",
-    paddingBottom: "15px !important",
-    // margin: "15px auto !important",
+    // paddingLeft: "20px !important",
+    // paddingRight: "20px !important",
+    // paddingTop: "15px !important",
+    // paddingBottom: "15px !important",
+    padding: "15px 20px 0 20px !important",
   },
   containerLeftSidePadding: {
     paddingLeft: "20px !important",
@@ -302,11 +304,11 @@ const OrderPage = () => {
 
   return (
     <div style={{ backgroundColor: "#F3F3F3" }}>
-      <div style={{ marginBottom: "10px", backgroundColor: "#fff" }}>
+      <div className={classes.main}>
         <Container
           maxWidth="xs"
           style={{
-            padding: "15px 20px 0 20px",
+            padding: "0 20px",
           }}
         >
           <Grid container alignItems="center">
@@ -359,52 +361,50 @@ const OrderPage = () => {
         </Container>
 
         <Container maxWidth="xs" className={classes.container2SidePadding}>
-          <Box sx={{ margin: "25px 0px" }}>
-            <FormControl fullWidth variant="outlined">
-              <OutlinedInput
-                id="outlined-adornment-password"
-                placeholder="Search posts, dishes etc"
-                // value={values.password}
-                // onChange={handleChange('password')}
-                // className={classes.inputStyle}
-                style={{
-                  borderRadius: "50px",
-                  paddingRight: "20px",
-                  paddingLeft: "7px",
-                  fontSize: "16px",
-                  color: "#666E7A",
-                }}
-                startAdornment={
-                  <InputAdornment position="start">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      // onClick={handleClickShowPassword}
-                      // onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                    >
-                      <img
-                        src={searchIcon3}
-                        alt=""
-                        style={{ marginRight: "10px", paddingLeft: "4px" }}
-                      />
-                    </IconButton>
-                  </InputAdornment>
-                }
-              />
-            </FormControl>
-          </Box>
+          <FormControl fullWidth variant="outlined">
+            <OutlinedInput
+              id="outlined-adornment-password"
+              placeholder="Search posts, dishes etc"
+              // value={values.password}
+              // onChange={handleChange('password')}
+              // className={classes.inputStyle}
+              style={{
+                borderRadius: "50px",
+                paddingRight: "20px",
+                paddingLeft: "7px",
+                fontSize: "16px",
+                color: "#666E7A",
+              }}
+              startAdornment={
+                <InputAdornment position="start">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    // onClick={handleClickShowPassword}
+                    // onMouseDown={handleMouseDownPassword}
+                    edge="end"
+                  >
+                    <img
+                      src={searchIcon3}
+                      alt=""
+                      style={{ marginRight: "10px", paddingLeft: "4px" }}
+                    />
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
         </Container>
 
         <Container maxWidth="xs" className={classes.container2SidePadding}>
-          <Box sx={{ margin: "25px 0px" }}>
+     
             <RestaurantCorousel />
-          </Box>
+         
         </Container>
 
         <Container
           maxWidth="xs"
           style={{
-            padding: "15px 0px 15px 20px",
+            padding: "25px 0px 0px 20px",
           }}
         >
           <div style={{ overflow: "hidden" }}>
@@ -414,9 +414,7 @@ const OrderPage = () => {
 
         <Container
           maxWidth="xs"
-          style={{
-            padding: "15px 20px 15px 20px",
-          }}
+          className={classes.container2SidePadding}
         >
           <div
             style={{
@@ -457,9 +455,9 @@ const OrderPage = () => {
         </Container>
       </div>
 
-      <div style={{ marginBottom: "10px", backgroundColor: "#fff" }}>
-        <Container maxWidth="xs" className={classes.container2SidePadding}>
-          <Box sx={{ paddingTop: "15px" }}>
+      <div className={classes.main}>
+        <Container maxWidth="xs" style={{padding:'0 20px'}}>
+     
             <Grid container justifyContent="space-between" alignItems="center">
               <Grid item xs={6}>
                 <h3 className={classes.h3}>Offers</h3>
@@ -473,7 +471,7 @@ const OrderPage = () => {
                 </Button>
               </Grid>
             </Grid>
-          </Box>
+   
         </Container>
         <Container
           maxWidth="xs"
@@ -485,9 +483,9 @@ const OrderPage = () => {
           <OfferCorousel />
         </Container>
       </div>
-      <div style={{ marginBottom: "10px", backgroundColor: "#fff" }}>
-        <Container maxWidth="xs" className={classes.container2SidePadding}>
-          <Box sx={{ padding: "25px 0 10px 0" }}>
+      <div className={classes.main}>
+        <Container maxWidth="xs" style={{padding:'10px 20px'}}>
+        
             <label className={classes.h3}>Updates</label>&nbsp;&nbsp;
             <label
               className={classes.h4}
@@ -495,7 +493,7 @@ const OrderPage = () => {
             >
               2.3K Posts
             </label>
-          </Box>
+    
         </Container>
         <Container
           maxWidth="xs"
@@ -507,11 +505,11 @@ const OrderPage = () => {
           <UpdateAndReviewCarousel />
         </Container>
       </div>
-      <div style={{ marginBottom: "10px", backgroundColor: "#fff" }}>
-        <Container maxWidth="xs" className={classes.container2SidePadding}>
-          <Box sx={{ padding: "25px 0 10px 0" }}>
+      <div className={classes.main}>
+        <Container maxWidth="xs" style={{padding:'10px 20px'}}>
+        
             <label className={classes.h3}>Reviews & Recommendations</label>
-          </Box>
+   
         </Container>
         <Container
           maxWidth="xs"

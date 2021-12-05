@@ -32,7 +32,9 @@ const Layout = () => {
   };
   return (
     <React.Fragment>
+      <div>
       <Navigation />
+      </div>
       {/* {location && location.pathname === "/dine-menu" && (
         <div
           style={{
@@ -48,7 +50,9 @@ const Layout = () => {
           <Navbar />
         </div>
       )} */}
+        <div style={{height:'80px'}}>
       {footerNavbar()}
+      </div>
     </React.Fragment>
   );
 };
