@@ -2,12 +2,23 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import ResturentBannerImage from "../../assets/images/ResturentBannerImage.png";
-import { borderRadius } from "@mui/system";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+  dotStyle: {
+    ["& .carousel .control-dots .dot.selected"]: {
+      width: "15px",
+      borderRadius: "10px",
+    },
+  },
+}));
 
 const RestaurantCorousel = () => {
+  const classes = useStyles();
   return (
     <div>
       <Carousel
+        className={classes.dotStyle}
         showArrows={false}
         autoPlay={true}
         emulateTouch={true}

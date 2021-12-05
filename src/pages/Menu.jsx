@@ -156,9 +156,10 @@ const useStyles = makeStyles((theme) => ({
     // borderRadius: "16px 16px 0px 0px",
 
     bottom: 0,
-    boxShadow: "rgb(17 17 26 / 2%) 0px 15px 20px",
+    // boxShadow: "rgb(17 17 26 / 2%) 0px 15px 20px",
     paddingLeft: "20px",
     paddingRight: "20px",
+    borderBottom: "2px solid #E5E5E5",
   },
   centerIcon: {
     display: "block",
@@ -361,8 +362,7 @@ const Menu = () => {
           </Grid>
         </Grid>
       </Container>
-     
-     
+
       <Container
         maxWidth="xs"
         style={{
@@ -396,12 +396,10 @@ const Menu = () => {
               activeIndex={activeIndex}
               reload={reload}
             />
-             
           </Grid>
         </Grid>
       </Container>
-    
-    
+
       <Container
         maxWidth="xs"
         className={classes.container2SidePaddingAndMargin}
@@ -482,8 +480,7 @@ const Menu = () => {
           ))}
         </section>
       </Container>
-    
-    
+
       <Container
         maxWidth="xs"
         className={classes.container2SidePaddingAndMargin}
@@ -564,8 +561,7 @@ const Menu = () => {
           ))}
         </section>
       </Container>
-    
-    
+
       <Container
         maxWidth="xs"
         style={{
@@ -650,8 +646,7 @@ const Menu = () => {
           ))}
         </section>
       </Container>
-   
-   
+
       <Container
         maxWidth="xs"
         className={classes.container2SidePaddingAndMargin}
