@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import pickUpIconBlack from "../assets/images/pickUpIconBlack.svg";
-import pickUpIconWhite from "../assets/images/pickUpIconWhite.svg";
-import dineIconWhite from "../assets/images/dineIconWhite.svg";
-import dineIconBlack from "../assets/images/dineIconBlack.svg";
+// import pickUpIconBlack from "../assets/images/pickUpIconBlack.svg";
+// import pickUpIconWhite from "../assets/images/pickUpIconWhite.svg";
+// import dineIconWhite from "../assets/images/dineIconWhite.svg";
+// import dineIconBlack from "../assets/images/dineIconBlack.svg";
+// import square from "../assets/images/square.svg";
+// import backArrow from "../assets/images/backArrow.svg";
 
 import logo from "../assets/images/logo.svg";
 import locationIcon from "../assets/images/LocationIcon.svg";
-import square from "../assets/images/square.svg";
-import backArrow from "../assets/images/backArrow.svg";
 import clock from "../assets/images/clock.svg";
 
 import { makeStyles } from "@mui/styles";
@@ -20,7 +20,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { styled } from "@mui/material/styles";
 
 import InputLabel from "@mui/material/InputLabel";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   h2: {
@@ -204,17 +204,8 @@ const SetDine = () => {
     setNoOfGuest(event.target.value);
   };
 
-  function generate(element) {
-    return [0, 1, 2].map((value) =>
-      React.cloneElement(element, {
-        key: value,
-      })
-    );
-  }
-
-  const Demo = styled("div")(({ theme }) => ({
-    backgroundColor: theme.palette.background.paper,
-  }));
+   
+ 
   return (
     <div style={{ background: "#fff" }}>
       <Container

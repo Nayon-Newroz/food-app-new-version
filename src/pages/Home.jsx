@@ -6,10 +6,10 @@ import homeLogo from "../assets/images/homeLogo.png";
 import facebook from "../assets/images/facebook.png";
 import instagram from "../assets/images/instagram.png";
 import youtube from "../assets/images/youtube.png";
-import dishIcon from "../assets/images/dishIcon.png";
-import reserveIcon from "../assets/images/reserveIcon.png";
-import wallet from "../assets/images/wallet.png";
-import forwardIcon from "../assets/images/forwardIcon.png";
+// import dishIcon from "../assets/images/dishIcon.png";
+// import reserveIcon from "../assets/images/reserveIcon.png";
+// import wallet from "../assets/images/wallet.png";
+// import forwardIcon from "../assets/images/forwardIcon.png";
 import GlobalIcon from "../assets/images/GlobalIcon.svg";
 
 import { makeStyles } from "@mui/styles";
@@ -19,24 +19,24 @@ import Select from "@mui/material/Select";
 
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
+// import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { styled } from "@mui/material/styles";
 import OrderDrawer from "./partial/OrderDrawer";
 
-import InputAdornment from "@mui/material/InputAdornment";
-import TextField from "@mui/material/TextField";
-import { CircularProgress } from "@mui/material";
-import AccountCircle from "@mui/icons-material/AccountCircle";
+// import InputAdornment from "@mui/material/InputAdornment";
+// import TextField from "@mui/material/TextField";
+// import { CircularProgress } from "@mui/material";
+// import AccountCircle from "@mui/icons-material/AccountCircle";
 
-import Button from "@mui/material/Button";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
-import Grow from "@mui/material/Grow";
-import Paper from "@mui/material/Paper";
-import Popper from "@mui/material/Popper";
-import MenuList from "@mui/material/MenuList";
-import Stack from "@mui/material/Stack";
+// import Button from "@mui/material/Button";
+// import ClickAwayListener from "@mui/material/ClickAwayListener";
+// import Grow from "@mui/material/Grow";
+// import Paper from "@mui/material/Paper";
+// import Popper from "@mui/material/Popper";
+// import MenuList from "@mui/material/MenuList";
+// import Stack from "@mui/material/Stack";
 
 const useStyles = makeStyles((theme) => ({
   h2: {
@@ -154,26 +154,26 @@ const Home = () => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
+  // const handleToggle = () => {
+  //   setOpen((prevOpen) => !prevOpen);
+  // };
 
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
+  // const handleClose = (event) => {
+  //   if (anchorRef.current && anchorRef.current.contains(event.target)) {
+  //     return;
+  //   }
 
-    setOpen(false);
-  };
+  //   setOpen(false);
+  // };
 
-  function handleListKeyDown(event) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === "Escape") {
-      setOpen(false);
-    }
-  }
+  // function handleListKeyDown(event) {
+  //   if (event.key === "Tab") {
+  //     event.preventDefault();
+  //     setOpen(false);
+  //   } else if (event.key === "Escape") {
+  //     setOpen(false);
+  //   }
+  // }
 
   // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
@@ -193,9 +193,7 @@ const Home = () => {
     setLanguage(event.target.value);
   };
 
-  const Demo = styled("div")(({ theme }) => ({
-    backgroundColor: theme.palette.background.paper,
-  }));
+  
   return (
     <div>
       <Container

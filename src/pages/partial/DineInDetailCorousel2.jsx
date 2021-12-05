@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { makeStyles } from "@mui/styles";
-import personIcon from "../../assets/images/personIcon.png";
-import locationIcon from "../../assets/images/LocationIcon.svg";
+import personIcon from "../../assets/images/personIcon.png"; 
 import FlagIcon from "../../assets/images/FlagIcon.png";
 import Button from "@mui/material/Button";
 
@@ -78,10 +77,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DineInDetailCorousel2 = () => {
-  const data = [
-    { icon: personIcon, NoOfPersons: 2, TableNo: 5 },
-    { icon: FlagIcon, Resturent: "Main Hall, KFC Banani, Dhaka" },
-  ];
+  
   const classes = useStyles();
 
   function SampleNextArrow(props) {

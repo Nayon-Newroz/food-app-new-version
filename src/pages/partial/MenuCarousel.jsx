@@ -2,27 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { makeStyles } from "@mui/styles";
-import Grid from "@mui/material/Grid";
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
-import AddIcon from "@mui/icons-material/Add";
-import IconButton from "@mui/material/IconButton";
-import burger from "../../assets/images/burger.png";
-import chicken from "../../assets/images/chicken.png";
-import cardImage1 from "../../assets/images/cardImage1.png";
-import cardImage2 from "../../assets/images/cardImage2.png";
-import cardImage3 from "../../assets/images/cardImage3.png";
-import batch from "../../assets/images/batch.svg";
-import Like from "../../assets/images/Like.svg";
-
-import Liker1 from "../../assets/images/Liker1.svg";
-import Liker2 from "../../assets/images/Liker2.svg";
-import Liker3 from "../../assets/images/Liker3.svg";
-import LikerRest from "../../assets/images/LikerRest.svg";
-import { borderRadius, padding } from "@mui/system";
-
-import menuIcon2 from "../../assets/images/menuIcon2.svg";
+import { makeStyles } from "@mui/styles"; 
 
 const useStyles = makeStyles((theme) => ({
   h3: {

@@ -3,13 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { makeStyles } from "@mui/styles";
-import Grid from "@mui/material/Grid";
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
-import AddIcon from "@mui/icons-material/Add";
-import IconButton from "@mui/material/IconButton";
-import burger from "../../assets/images/burger.png";
-import chicken from "../../assets/images/chicken.png";
+import Grid from "@mui/material/Grid"; 
 import postImage1 from "../../assets/images/postImage1.png";
 import postImage2 from "../../assets/images/postImage2.png";
 import postUser1 from "../../assets/images/postUser1.png";
@@ -18,15 +12,7 @@ import galleryIcon from "../../assets/images/galleryIcon.png";
 import foodSmallImage from "../../assets/images/foodSmallImage.png";
 import Heart2 from "../../assets/images/Heart2.png";
 import Message2 from "../../assets/images/Message2.png";
-import Share2 from "../../assets/images/Share2.png";
-import Badge2 from "../../assets/images/Badge2.png";
-import batch from "../../assets/images/batch.svg";
-import Like from "../../assets/images/Like.svg";
-
-import Liker1 from "../../assets/images/Liker1.svg";
-import Liker2 from "../../assets/images/Liker2.svg";
-import Liker3 from "../../assets/images/Liker3.svg";
-import LikerRest from "../../assets/images/LikerRest.svg";
+import Share2 from "../../assets/images/Share2.png"; 
 import Divider from "@mui/material/Divider";
 
 const useStyles = makeStyles((theme) => ({

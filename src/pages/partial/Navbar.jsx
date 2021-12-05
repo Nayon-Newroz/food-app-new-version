@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Inter', sans-serif",
     color: "#666E7A",
     margin: 0,
+    fontWeight: 400,
   },
 
   menuStyle: {
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   active: {
-    ["& p"]: {
+    "& p": {
       color: "#272D2F",
       fontWeight: 500,
     },
@@ -55,8 +56,7 @@ const Navbar = () => {
   const classes = useStyles();
   let location = useLocation();
   let pathName = location.pathname;
-  
-   
+
   return (
     <div>
       <Container

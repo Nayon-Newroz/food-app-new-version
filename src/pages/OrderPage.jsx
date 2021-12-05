@@ -1,38 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
-import FilterIcon from "../assets/images/FilterIcon.svg";
-import burgerBanner from "../assets/images/burgerBanner.svg";
-import cardFoodImage from "../assets/images/cardFoodImage.png";
-import exploreActive from "../assets/images/exploreActive.svg";
-import menu from "../assets/images/menu.svg";
-import offers from "../assets/images/offers.svg";
-import Recommendations from "../assets/images/Recommendations.svg";
-import restaurantImage from "../assets/images/restaurantImage.png";
-import dineIn from "../assets/images/dineIn.svg";
+// import FilterIcon from "../assets/images/FilterIcon.svg";
+// import burgerBanner from "../assets/images/burgerBanner.svg";
+// import cardFoodImage from "../assets/images/cardFoodImage.png";
+// import exploreActive from "../assets/images/exploreActive.svg";
+// import menu from "../assets/images/menu.svg";
+// import offers from "../assets/images/offers.svg";
+// import Recommendations from "../assets/images/Recommendations.svg";
+// import restaurantImage from "../assets/images/restaurantImage.png";
+// import dineIn from "../assets/images/dineIn.svg";
+// import locationIcon from "../assets/images/LocationIcon.svg";
+// import Search from "../assets/images/Search.png";
+// import personIcon from "../assets/images/personIcon.png";
+// import arrowDown from "../assets/images/arrowDown.png";
+// import square from "../assets/images/square.svg";
+// import menuIcon from "../assets/images/menuIcon.svg";
+// import Box from "@mui/material/Box";
+// import AddIcon from "@mui/icons-material/Add";
 import logo from "../assets/images/logo.svg";
-import locationIcon from "../assets/images/LocationIcon.svg";
-import Search from "../assets/images/Search.png";
 import searchIcon3 from "../assets/images/searchIcon3.png";
-import personIcon from "../assets/images/personIcon.png";
 import user4 from "../assets/images/user4.png";
-import arrowDown from "../assets/images/arrowDown.png";
 import clubPassLogo from "../assets/images/clubPassLogo.png";
 import clubPassIcon from "../assets/images/clubPassIcon.png";
-import square from "../assets/images/square.svg";
-import menuIcon from "../assets/images/menuIcon.svg";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
 import IconButton from "@mui/material/IconButton";
 
-import { makeStyles } from "@mui/styles";
-import RestaurantItemCorousel from "./partial/RestaurantItemCorousel";
-import RecommendationItemCarousel from "./partial/RecommendationItemCarousel";
+import { makeStyles } from "@mui/styles"; 
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
-import FormControl from "@mui/material/FormControl";
-import DineInDetailCorousel from "./partial/DineInDetailCorousel";
+import FormControl from "@mui/material/FormControl"; 
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
 import backArrow from "../assets/images/backArrow.svg";
@@ -131,6 +128,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container2SidePaddingAndMargin: {
     padding: "15px 20px 0 20px !important",
+    overflow: "hidden",
   },
 
   customBadge: {
@@ -158,60 +156,27 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "0px",
     },
   },
+  ellipsisStyle: {
+    overflow: "hidden",
+    whiteSpace: "nowrap",
+    textOverflow: "ellipsis",
+    marginTop: "4px",
+  },
+  card: {
+    border: "1px solid #EEEEEE",
+    padding: "12px 20px",
+    borderRadius: "10px",
+  },
+  rightAlign: {
+    textAlign: "right",
+  },
+  ContainerPadding: {
+    padding: "10px 20px !important",
+  },
 }));
 
 const OrderPage = () => {
   const classes = useStyles();
-  const [active, setActive] = useState("Deals");
-  const fnActive = (id) => {
-    // setActive(id);
-    var elmntToView1 = document.getElementById("menu");
-    elmntToView1.scrollIntoView({
-      behavior: "smooth",
-    });
-
-    const yOffset = -70;
-    const element = document.getElementById(id);
-    const y =
-      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
-  // useEffect(() => {
-  //   const sections = document.querySelectorAll("section");
-  //   let sectionsDetail = [];
-
-  //   sections.forEach((section) => {
-  //     const sectionTop = section.offsetTop - 90;
-  //     let sectionId = section.getAttribute("id");
-
-  //     sectionsDetail.push({ id: sectionId, top: sectionTop });
-  //     // console.log("sectionTop", sectionTop, sectionTop-90);
-  //     // const sectionHeight = section.clientHeight;
-  //     // console.log("sectionHeight", sectionHeight);
-  //   });
-
-  //   document.addEventListener("scroll", () => {
-  //     const scrollCheck = window.scrollY;
-
-  //     let sectionId;
-
-  //     if (scrollCheck >= sectionsDetail[0].top) {
-  //       sectionsDetail.forEach((element, index) => {
-  //         if (scrollCheck >= element.top) {
-  //           sectionId = element.id;
-  //         }
-  //       });
-  //     }
-
-  //     if (typeof sectionId === "undefined") {
-  //       setActive("Deals");
-  //     } else {
-  //       setActive(sectionId);
-  //     }
-  //   });
-  // }, []);
 
   return (
     <div style={{ backgroundColor: "#F3F3F3" }}>
@@ -244,21 +209,13 @@ const OrderPage = () => {
                     &nbsp; &nbsp;
                     <label className={classes.h4}>KFC-Banani</label>
                   </div>
-                  <div
-                    style={{
-                      overflow: "hidden",
-                      whiteSpace: "nowrap",
-                      textOverflow: "ellipsis",
-                      marginTop: "4px",
-                    }}
-                    className={classes.h5}
-                  >
+                  <div className={`${classes.h5} ${classes.ellipsisStyle}`}>
                     Blue Ocean Tower, 40 kemal Atatu...
                   </div>
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={2} style={{ textAlign: "right" }}>
+            <Grid item xs={2} className={classes.rightAlign}>
               <Badge classes={{ badge: classes.customBadge }} variant="dot">
                 <Avatar
                   alt="Remy Sharp"
@@ -322,13 +279,7 @@ const OrderPage = () => {
         </Container>
 
         <Container maxWidth="xs" className={classes.container2SidePadding}>
-          <div
-            style={{
-              border: "1px solid #EEEEEE",
-              padding: "12px 20px",
-              borderRadius: "10px",
-            }}
-          >
+          <div className={classes.card}>
             <Grid container alignItems="flex-start">
               <Grid item xs={9}>
                 <img src={clubPassLogo} alt="" />
@@ -361,7 +312,7 @@ const OrderPage = () => {
             <Grid item xs={6}>
               <h3 className={classes.h3}>Offers</h3>
             </Grid>
-            <Grid item xs={6} style={{ textAlign: "right" }}>
+            <Grid item xs={6} className={classes.rightAlign}>
               <Button
                 className={classes.buttonTextStyle}
                 endIcon={<img src={arrowRight} alt="" />}
@@ -374,15 +325,12 @@ const OrderPage = () => {
         <Container
           maxWidth="xs"
           className={classes.container2SidePaddingAndMargin}
-          style={{
-            overflow: "hidden",
-          }}
         >
           <OfferCorousel />
         </Container>
       </div>
       <div className={classes.main}>
-        <Container maxWidth="xs" style={{ padding: "10px 20px" }}>
+        <Container maxWidth="xs" className={classes.ContainerPadding}>
           <label className={classes.h3}>Updates</label>&nbsp;&nbsp;
           <label
             className={classes.h4}
@@ -394,23 +342,17 @@ const OrderPage = () => {
         <Container
           maxWidth="xs"
           className={classes.container2SidePaddingAndMargin}
-          style={{
-            overflow: "hidden",
-          }}
         >
           <UpdateAndReviewCarousel />
         </Container>
       </div>
       <div className={classes.main}>
-        <Container maxWidth="xs" style={{ padding: "10px 20px" }}>
+        <Container maxWidth="xs" className={classes.ContainerPadding}>
           <label className={classes.h3}>Reviews & Recommendations</label>
         </Container>
         <Container
           maxWidth="xs"
           className={classes.container2SidePaddingAndMargin}
-          style={{
-            overflow: "hidden",
-          }}
         >
           <UpdateAndReviewCarousel />
         </Container>

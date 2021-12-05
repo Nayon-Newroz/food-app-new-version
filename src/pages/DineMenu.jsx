@@ -12,7 +12,7 @@ import dineIn from "../assets/images/dineIn.svg";
 import logo from "../assets/images/logo.svg";
 import locationIcon from "../assets/images/LocationIcon.svg";
 import Search from "../assets/images/Search.png";
-import personIcon from "../assets/images/personIcon.png";
+// import personIcon from "../assets/images/personIcon.png";
 import arrowDown from "../assets/images/arrowDown.png";
 import square from "../assets/images/square.svg";
 import menuIcon from "../assets/images/menuIcon.svg";

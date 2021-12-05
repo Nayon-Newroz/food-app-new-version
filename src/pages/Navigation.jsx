@@ -1,38 +1,36 @@
 import React from "react";
 import DineMenu from "./DineMenu";
 import Home from "./Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import SetDine from "./SetDine";
 import Menu from "./Menu";
 import OrderPage from "./OrderPage";
-import Order from "./order/Order";
+// import Order from "./order/Order";
 
 const Navigation = () => {
   return (
     <React.Fragment>
-     
-        <Switch>
-          {/* <Route path="/order">
+      <Switch>
+        {/* <Route path="/order">
             <Order />
           </Route> */}
-          <Route path="/home">
-            <OrderPage />
-          </Route>
-          <Route path="/menu">
-            <Menu />
-          </Route>
-          <Route path="/set-dine">
-            <SetDine />
-          </Route>
-          <Route path="/dine-menu">
-            <DineMenu />
-          </Route>
+        <Route path="/home">
+          <OrderPage />
+        </Route>
+        <Route path="/menu">
+          <Menu />
+        </Route>
+        <Route path="/set-dine">
+          <SetDine />
+        </Route>
+        <Route path="/dine-menu">
+          <DineMenu />
+        </Route>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
-   
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
     </React.Fragment>
   );
 };

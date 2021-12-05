@@ -1,6 +1,5 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Layout from "./pages/Layout";
-import Navigation from "./pages/Navigation";
+import Layout from "./pages/Layout"; 
 import { BrowserRouter as Router } from "react-router-dom";
 import Container from "@mui/material/Container";
 
