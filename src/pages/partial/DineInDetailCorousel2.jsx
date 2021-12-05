@@ -48,6 +48,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(376)]: {
       fontSize: "11px !important",
     },
+    background:'#F3F3F3',
+    margin:'0 10px 0 0'
   },
   carouselWidth: {
     minWidth: "350px",
@@ -108,16 +110,18 @@ const DineInDetailCorousel2 = () => {
     className: "slider variable-width",
     // className: "center",
     // centerMode: true,
-    // infinite: true,
+    infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     swipeToSlide: true,
+    variableWidth: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className={classes.carouselWidth}>
+    // <div className={classes.carouselWidth}>
+      <div >
       <Slider {...settings}>
         <div style={{ width: "auto" }}>
           <div>
@@ -134,7 +138,7 @@ const DineInDetailCorousel2 = () => {
           </div>
         </div>
 
-        <div style={{ width: "300px" }}>
+        <div style={{ width: "auto", }}>
           <div>
             <Button
               className={classes.iconButtonStyle2}
@@ -144,7 +148,7 @@ const DineInDetailCorousel2 = () => {
                 <img src={FlagIcon} alt="" className={classes.iconStyle} />
               }
             >
-              Main Hall, KFC Banani
+              Main Hall, KFC Banani, Dhaka
             </Button>
           </div>
         </div>

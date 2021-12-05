@@ -358,7 +358,6 @@ const OrderPage = () => {
           </Grid>
         </Container>
 
-       
         <Container maxWidth="xs" className={classes.container2SidePadding}>
           <Box sx={{ margin: "25px 0px" }}>
             <FormControl fullWidth variant="outlined">
@@ -401,9 +400,6 @@ const OrderPage = () => {
             <RestaurantCorousel />
           </Box>
         </Container>
-
-
-
 
         <Container
           maxWidth="xs"
