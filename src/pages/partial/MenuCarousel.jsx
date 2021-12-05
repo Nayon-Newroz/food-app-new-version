@@ -230,6 +230,7 @@ const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
   // const highestIndex = arreyLength - slidesToShowSlider;
 
   const settings = {
+    className: "slider variable-width",
     // className: "center",
     // centerMode: true,
     // dots: true,
@@ -238,8 +239,10 @@ const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
+    variableWidth: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+
     beforeChange: (current, next) => setState({ activeSlide: next }),
     afterChange: (current) => setState({ activeSlide2: current }),
   };
@@ -262,8 +265,8 @@ const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
         AfterChange ==== activeSlide: <strong>{state.activeSlide2}</strong>
       </p> */}
       <Slider ref={(slider) => (slider1.current = slider)} {...settings}>
-        <div>
-          <div style={{ padding: "0 5px" }}>
+        <div style={{ width: "auto"}}>
+          <div style={{ padding: "0 25px" }}>
             <div
               className={`${classes.itemStyle} ${
                 active === "Deals" ? classes.active : null
@@ -274,8 +277,8 @@ const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
             </div>
           </div>
         </div>
-        <div>
-          <div style={{ padding: "0 5px" }}>
+        <div style={{ width: "auto" }}>
+          <div style={{ padding: "0 25px" }}>
             <div
               className={`${classes.itemStyle} ${
                 active === "Popular" ? classes.active : null
@@ -286,8 +289,8 @@ const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
             </div>
           </div>
         </div>
-        <div>
-          <div style={{ padding: "0 5px" }}>
+        <div style={{ width: "auto" }}>
+          <div style={{ padding: "0 25px" }}>
             <div
               className={`${classes.itemStyle} ${
                 active === "For One" ? classes.active : null
@@ -298,8 +301,8 @@ const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
             </div>
           </div>
         </div>
-        <div>
-          <div style={{ padding: "0 5px" }}>
+        <div style={{ width: "auto" }}>
+          <div style={{ padding: "0 25px" }}>
             <div
               className={`${classes.itemStyle} ${
                 active === "For Sharing" ? classes.active : null
