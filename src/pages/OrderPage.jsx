@@ -77,23 +77,12 @@ const useStyles = makeStyles((theme) => ({
     color: "#666E7A",
     margin: 0,
   },
-  main:{
-    marginBottom: "10px", backgroundColor: "#fff",padding:'15px 0'
+  main: {
+    marginBottom: "10px",
+    backgroundColor: "#fff",
+    padding: "15px 0",
   },
-  itemText: {
-    fontSize: "15px",
-    fontFamily: "'Inter', sans-serif",
-    color: "#666E7A",
-    margin: 0,
-  },
-  menuItem: {
-    fontSize: "14px",
-    fontFamily: "'Inter', sans-serif",
-    fontWeight: 500,
-    margin: "13px 0",
-    color: "#666E7A",
-    // cursor:'pointer',
-  },
+
   logoStyle: {
     // height: "45px",
     width: "100%",
@@ -124,104 +113,26 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "13px !important",
     },
   },
-  iconButtonStyle2: {
-    color: "#666E7A !important",
-    border: "1px solid #E5E5E5 !important",
-    borderRadius: "25px !important",
-    fontSize: "13px !important",
-    fontFamily: "'Inter', sans-serif !important",
-    fontWeight: "400 !important",
-    ["& .MuiButton-startIcon"]: {
-      marginRight: "2px !important",
-    },
-  },
-  backgroundStyle: {
-    backgroundImage: `url(${restaurantImage})`,
-    height: "100%",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    position: "relative",
-  },
-  backgroundStyle2: {
-    backgroundImage: `url(${burgerBanner})`,
-    height: "100%",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-  },
-  menuStyle: {
-    height: "70px",
-    background: "#fff",
-    borderRadius: "16px 16px 0px 0px",
-    position: "absolute",
-    bottom: 0,
-    boxShadow: "rgb(17 17 26 / 10%) 0px 4px 12px",
-    paddingLeft: "20px",
-    paddingRight: "20px",
-  },
-  menuStyle2: {
-    height: "50px",
-    // background: "#fff",
-    // borderRadius: "16px 16px 0px 0px",
-
-    bottom: 0,
-    boxShadow: "rgb(17 17 26 / 2%) 0px 15px 20px",
-    paddingLeft: "20px",
-    paddingRight: "20px",
-  },
-  centerIcon: {
-    display: "block",
-    margin: "12px auto 7px auto",
-  },
-  itemStyle: {
-    height: "100%",
-    // padding: "0 10px",
-    borderTop: "2px solid rgba(0,0,0,0)",
-    borderBottom: "2px solid rgba(0,0,0,0)",
-    cursor: "pointer",
-  },
-  active: {
-    ["& p"]: {
-      color: "#272D2F",
-      fontWeight: 600,
-    },
-    ["& h4"]: {
-      color: "#272D2F",
-      fontWeight: 600,
-    },
-
-    borderBottom: "2px solid #272D2F",
-  },
 
   buttonStyle: {
-    background: "#272D2F !important",
-    padding: "0px !important",
-    borderRadius: "5px !important",
-  },
-  cardContainer: {
-    borderBottom: "2px solid #F2EFEF",
-    "&:last-child": {
-      borderBottom: "2px solid rgba(0,0,0,0)",
+    background: "#FD0061",
+    textTransform: "none",
+    padding: "2px 12px",
+    margin: "12px auto 0 auto",
+    display: "block",
+    "&:hover": { background: "#FD0061" },
+    [theme.breakpoints.down(420)]: {
+      fontSize: "11px",
     },
   },
-  inputStyle: {
-    boxShadow: "rgba(149, 157, 165, 0.2) 0px 1px 4px",
-  },
-  container2SidePadding: { 
-    padding: "25px 20px 0 20px !important",
+
+  container2SidePadding: {
+    padding: "20px 20px 0 20px !important",
   },
   container2SidePaddingAndMargin: {
-    // paddingLeft: "20px !important",
-    // paddingRight: "20px !important",
-    // paddingTop: "15px !important",
-    // paddingBottom: "15px !important",
     padding: "15px 20px 0 20px !important",
   },
-  containerLeftSidePadding: {
-    paddingLeft: "20px !important",
-    paddingRight: "0px !important",
-  },
+
   customBadge: {
     backgroundColor: "#008000",
     color: "white",
@@ -367,7 +278,7 @@ const OrderPage = () => {
               placeholder="Search posts, dishes etc"
               // value={values.password}
               // onChange={handleChange('password')}
-              // className={classes.inputStyle}
+
               style={{
                 borderRadius: "50px",
                 paddingRight: "20px",
@@ -396,9 +307,7 @@ const OrderPage = () => {
         </Container>
 
         <Container maxWidth="xs" className={classes.container2SidePadding}>
-     
-            <RestaurantCorousel />
-         
+          <RestaurantCorousel />
         </Container>
 
         <Container
@@ -412,10 +321,7 @@ const OrderPage = () => {
           </div>
         </Container>
 
-        <Container
-          maxWidth="xs"
-          className={classes.container2SidePadding}
-        >
+        <Container maxWidth="xs" className={classes.container2SidePadding}>
           <div
             style={{
               border: "1px solid #EEEEEE",
@@ -438,14 +344,8 @@ const OrderPage = () => {
                 <img src={clubPassIcon} alt="" className={classes.logoStyle2} />
                 <Button
                   variant="contained"
-                  style={{
-                    background: "#FD0061",
-                    textTransform: "none",
-                    padding: "2px 12px",
-                    margin: "12px auto 0 auto",
-                    display: "block",
-                  }}
                   disableElevation
+                  className={classes.buttonStyle}
                 >
                   Join Now
                 </Button>
@@ -456,22 +356,20 @@ const OrderPage = () => {
       </div>
 
       <div className={classes.main}>
-        <Container maxWidth="xs" style={{padding:'0 20px'}}>
-     
-            <Grid container justifyContent="space-between" alignItems="center">
-              <Grid item xs={6}>
-                <h3 className={classes.h3}>Offers</h3>
-              </Grid>
-              <Grid item xs={6} style={{ textAlign: "right" }}>
-                <Button
-                  className={classes.buttonTextStyle}
-                  endIcon={<img src={arrowRight} alt="" />}
-                >
-                  See all
-                </Button>
-              </Grid>
+        <Container maxWidth="xs" style={{ padding: "0 20px" }}>
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Grid item xs={6}>
+              <h3 className={classes.h3}>Offers</h3>
             </Grid>
-   
+            <Grid item xs={6} style={{ textAlign: "right" }}>
+              <Button
+                className={classes.buttonTextStyle}
+                endIcon={<img src={arrowRight} alt="" />}
+              >
+                See all
+              </Button>
+            </Grid>
+          </Grid>
         </Container>
         <Container
           maxWidth="xs"
@@ -484,16 +382,14 @@ const OrderPage = () => {
         </Container>
       </div>
       <div className={classes.main}>
-        <Container maxWidth="xs" style={{padding:'10px 20px'}}>
-        
-            <label className={classes.h3}>Updates</label>&nbsp;&nbsp;
-            <label
-              className={classes.h4}
-              style={{ color: "#666E7A", fontWeight: 400 }}
-            >
-              2.3K Posts
-            </label>
-    
+        <Container maxWidth="xs" style={{ padding: "10px 20px" }}>
+          <label className={classes.h3}>Updates</label>&nbsp;&nbsp;
+          <label
+            className={classes.h4}
+            style={{ color: "#666E7A", fontWeight: 400 }}
+          >
+            2.3K Posts
+          </label>
         </Container>
         <Container
           maxWidth="xs"
@@ -506,10 +402,8 @@ const OrderPage = () => {
         </Container>
       </div>
       <div className={classes.main}>
-        <Container maxWidth="xs" style={{padding:'10px 20px'}}>
-        
-            <label className={classes.h3}>Reviews & Recommendations</label>
-   
+        <Container maxWidth="xs" style={{ padding: "10px 20px" }}>
+          <label className={classes.h3}>Reviews & Recommendations</label>
         </Container>
         <Container
           maxWidth="xs"
