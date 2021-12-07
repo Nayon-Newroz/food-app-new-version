@@ -230,11 +230,11 @@ const Menu = () => {
       if (typeof sectionIndex === "undefined") {
         setActiveIndex(0);
         // console.log("sectionIndex undefined", reload);
-        setReload(!reload);
+       
       } else {
         setActiveIndex(sectionIndex);
         // console.log("sectionIndex ", sectionIndex, reload);
-        setReload(!reload);
+       
       }
     });
   }, []);

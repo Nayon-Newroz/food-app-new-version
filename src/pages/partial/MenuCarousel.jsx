@@ -215,7 +215,7 @@ const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
     // centerMode: true,
     // dots: true,
     infinite: false,
-    speed: 500,
+    speed: 100,
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
@@ -228,7 +228,7 @@ const MenuCarousel = ({ fnActive, active, activeIndex, reload }) => {
   };
   useEffect(() => {
     slider1.current.slickGoTo(activeIndex);
-    // console.log("activeIndex1111", activeIndex);
+    console.log("activeIndex1111", activeIndex);
     // setTimeout(() => {
     //   setLateFire(!lateFire)
     // }, 2000);

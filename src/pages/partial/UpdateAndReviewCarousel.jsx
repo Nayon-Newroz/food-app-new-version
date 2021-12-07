@@ -195,10 +195,10 @@ const UpdateAndReviewCarousel = () => {
                       top: 20,
                       left: 20,
 
-                      backgroundColor: "black",
+                      backgroundColor: "rgba(0,0,0,.4)",
                       padding: "3px 10px",
                       borderRadius: "50px",
-                      opacity: 0.5,
+                     
                     }}
                   >
                     <Grid container justifyContent="center" alignItems="center">
